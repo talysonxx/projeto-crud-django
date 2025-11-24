@@ -56,3 +56,8 @@ python manage.py migrate
 
 # 5. Iniciar o servidor
 python manage.py runserver
+
+```
+obs: super usuário já criado
+acesso: admin
+senha: admin
