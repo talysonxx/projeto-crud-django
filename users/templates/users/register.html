@@ -1,0 +1,26 @@
+{% extends 'learning_logs/base.html' %}
+
+{% load bootstrap3 %}
+
+{% block header %}
+
+    <h1>criar conta</h1>
+
+{% endblock header%}
+
+{% block content %}
+    {% if form.errors %}
+        <p style="color: red;">- a senha deve conter 8 ou mais dígitos, letras maiúsculas, com letras minúsculas, um número e um caractere especial.</p>
+        <p style="color: red;">- a senha não deve incluir o nome de usuário.</p>
+    {% endif %}
+
+    <form action="" method="POST" class="ul-none form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+
+        {% buttons %}
+            <button class="btn btn-primary">cadastrar</button> 
+        {% endbuttons %}
+    </form>
+
+{% endblock content %}
